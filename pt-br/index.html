@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>No Meat Proxy</title>
-		<meta name="description" content="AI is a tool. You shouldn't be.">
-		<link rel="canonical" href="https://nomeatproxy.com/">
+		<meta name="description" content="IA é uma ferramenta. Você não deveria ser.">
+		<link rel="canonical" href="https://nomeatproxy.com/pt-br/">
 		<link rel="alternate" hreflang="en" href="https://nomeatproxy.com/">
-		<link rel="alternate" hreflang="tr" href="https://nomeatproxy.com/tr/">
-		<link rel="alternate" hreflang="x-default" href="https://nomeatproxy.com/">
 		<link rel="alternate" hreflang="pt-BR" href="https://nomeatproxy.com/pt-br/">
 		<meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
 		<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
 
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://nomeatproxy.com/">
+		<meta property="og:url" content="https://nomeatproxy.com/pt-br/">
+		<meta property="og:locale" content="pt_BR">
 		<meta property="og:site_name" content="No Meat Proxy">
 		<meta property="og:title" content="No Meat Proxy">
-		<meta property="og:description" content="AI is a tool. You shouldn't be.">
+		<meta property="og:description" content="IA é uma ferramenta. Você não deveria ser.">
 		<meta property="og:image" content="https://nomeatproxy.com/social-card.png">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
-		<meta property="og:image:alt" content="No Meat Proxy logo next to the tagline: AI is a tool. You shouldn't be.">
+		<meta property="og:image:alt" content="Logo do No Meat Proxy ao lado do slogan: IA é uma ferramenta. Você não deveria ser.">
 
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="No Meat Proxy">
-		<meta name="twitter:description" content="AI is a tool. You shouldn't be.">
+		<meta name="twitter:description" content="IA é uma ferramenta. Você não deveria ser.">
 		<meta name="twitter:image" content="https://nomeatproxy.com/social-card.png">
 
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 		<style>
 			:root {
 				--bg: #fafaf8;
@@ -424,106 +423,106 @@
 	<body>
 		<main>
 			<div class="brand">
-				<img src="no_meat_proxy_logo.png" alt="No Meat Proxy logo">
+				<img src="../no_meat_proxy_logo.png" alt="Logo do No Meat Proxy">
 				<h1>No Meat Proxy</h1>
 			</div>
-			<p class="hook">AI is a tool. You shouldn't be.</p>
+			<p class="hook">IA é uma ferramenta. Você não deveria ser.</p>
 
 			<section class="examples">
 				<div class="example">
-					<h3>Don't paste AI responses to people</h3>
+					<h3>Não cole respostas de IA para as pessoas</h3>
 					<div class="mock-pair">
 						<div class="mock dont sync-height">
-							<span class="mock-label">✕ Don't</span>
+							<span class="mock-label">✕ Não faça</span>
 							<div class="msg">
-								<img class="avatar" src="jim.jpeg" alt="Jim">
+								<img class="avatar" src="../jim.jpeg" alt="Jim">
 								<div>
 									<div class="who">Jim</div>
-									<div class="bubble">Hey, how do the feature toggles work? Can we specify per user?</div>
+									<div class="bubble">E aí, como funcionam os feature toggles? Dá pra especificar por usuário?</div>
 								</div>
 							</div>
 							<div class="msg">
-								<img class="avatar" src="kevin.jpg" alt="Kevin">
+								<img class="avatar" src="../kevin.jpg" alt="Kevin">
 								<div>
 									<div class="who">Kevin</div>
 									<div class="bubble">
-										The feature flag system here is a config based custom implementation.
-										Definition: a FeatureToggles class — a @ConfigurationProperties data class with
-										boolean fields (e.g. enableNewCheckoutFlow, useOptimizedSearchIndex), registered via
-										@EnableConfigurationProperties in a FeatureConfig class. Usage pattern: inject FeatureToggles
-										and branch on the property, e.g. if (!featureToggles.enableNewCheckoutFlow) throw a
-										ForbiddenException. Some flags gate an early return/exception, others switch between
-										implementations entirely. Configuration is plain YAML under app.feature-toggles.*, with
-										per-profile overrides, and since it's standard @ConfigurationProperties, it's also
-										overridable via env vars. This means that toggling a feature per user is not possible given
-										today's implementation.
+										O sistema de feature flags daqui é uma implementação customizada baseada em config.
+										Definição: uma classe FeatureToggles — um data class @ConfigurationProperties com
+										campos booleanos (ex.: enableNewCheckoutFlow, useOptimizedSearchIndex), registrada via
+										@EnableConfigurationProperties numa classe FeatureConfig. Padrão de uso: injetar FeatureToggles
+										e ramificar na propriedade, ex.: if (!featureToggles.enableNewCheckoutFlow) throw a
+										ForbiddenException. Algumas flags barram um early return/exception, outras trocam
+										implementações por completo. A configuração é YAML simples em app.feature-toggles.*, com
+										overrides por profile, e como é @ConfigurationProperties padrão, também dá para
+										sobrescrever via env vars. Isso significa que ligar uma feature por usuário não é possível
+										com a implementação atual.
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="mock do sync-source">
-							<span class="mock-label">✓ Do</span>
+							<span class="mock-label">✓ Faça</span>
 							<div class="msg">
-								<img class="avatar" src="jim.jpeg" alt="Jim">
+								<img class="avatar" src="../jim.jpeg" alt="Jim">
 								<div>
 									<div class="who">Jim</div>
-									<div class="bubble">Hey, how do the feature toggles work? Can we specify per user?</div>
+									<div class="bubble">E aí, como funcionam os feature toggles? Dá pra especificar por usuário?</div>
 								</div>
 							</div>
 							<div class="msg">
-								<img class="avatar" src="kevin.jpg" alt="Kevin">
+								<img class="avatar" src="../kevin.jpg" alt="Kevin">
 								<div>
 									<div class="who">Kevin</div>
 									<div class="bubble">
-										I'm afraid not. It's a hardcoded on and off switch.
+										Infelizmente não. É um interruptor hardcoded de liga e desliga.
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<p>
-						By simply regurgitating what an AI gave, you made everything much harder on the one who asked
-						the question. AI-generated answers tend to be long-winded, over-complicated and often include
-						details that weren't requested. They asked you because they trusted your judgment. By simply forwarding AI output,
-						you're just acting as a middleman. You're just a meat proxy.
+						Ao simplesmente regurgitar o que uma IA te deu, você deixou tudo bem mais difícil para quem fez
+						a pergunta. Respostas geradas por IA tendem a ser prolixas, complicadas demais e muitas vezes incluem
+						detalhes que ninguém pediu. Te perguntaram porque confiaram no seu julgamento. Ao só encaminhar a saída da IA,
+						você está agindo como intermediário. Você é só um intermediário de carne e osso.
 					</p>
 					<p>
-						If all you do is relay messages between people and an AI, what value do you bring?
+						Se tudo o que você faz é retransmitir mensagens entre pessoas e uma IA, que valor você agrega?
 					</p>
-					<p>By replying with AI answers, you're:</p>
+					<p>Ao responder com respostas de IA, você está:</p>
 					<ul class="note-list">
-						<li>making it harder for everyone else.</li>
-						<li>highlighting your own replaceability.</li>
-						<li>not actually being helpful.</li>
-						<li>looking unprofessional.</li>
-						<li>making people trust you less.</li>
+						<li>deixando tudo mais difícil para os outros.</li>
+						<li>destacando o quanto você é substituível.</li>
+						<li>não sendo realmente útil.</li>
+						<li>parecendo pouco profissional.</li>
+						<li>fazendo as pessoas confiarem menos em você.</li>
 					</ul>
 					<div class="list-pair">
 						<div>
-							<p>More things to avoid:</p>
+							<p>Mais coisas a evitar:</p>
 							<ul class="note-list marked dont-list">
-								<li>Don't "contribute" to discussion by pasting wall-of-text AI results.</li>
-								<li>Don't ask questions like "Hey, so I have this problem: &lt;Big ass AI-generated block of text&gt;".</li>
+								<li>Não “contribua” na discussão colando um textão de IA.</li>
+								<li>Não faça perguntas do tipo “E aí, tô com esse problema: &lt;bloco gigante gerado por IA&gt;”.</li>
 							</ul>
 						</div>
 						<div>
-							<p>Here is what you should try instead:</p>
+							<p>Em vez disso, tente isto:</p>
 							<ul class="note-list marked do-list">
-								<li>Do read and verify AI output.</li>
-								<li>Do formulate your own answers and questions.</li>
-								<li>Do contribute to discussions when you have something meaningful to contribute.</li>
+								<li>Leia e verifique a saída da IA.</li>
+								<li>Formule suas próprias respostas e perguntas.</li>
+								<li>Participe das discussões quando tiver algo relevante a acrescentar.</li>
 							</ul>
 						</div>
 					</div>
 
-					<p>Answer people like a person. Treat people like people. Don't be a meat proxy!</p>
+					<p>Responda às pessoas como uma pessoa. Trate as pessoas como pessoas. Não seja um intermediário de carne e osso!</p>
 				</div>
 
 				<div class="example">
-					<h3>Don't submit AI-generated work you don't understand or haven't verified</h3>
+					<h3>Não entregue trabalho gerado por IA que você não entende ou não verificou</h3>
 					<div class="mock-pair">
 						<div class="mock dont">
-							<span class="mock-label">✕ Don't</span>
+							<span class="mock-label">✕ Não faça</span>
 							<div class="review">
 								<div class="diff-line">  function chargeCustomer(order) {</div>
 								<div class="diff-line add">+   try {</div>
@@ -533,17 +532,17 @@
 								<div class="diff-line add">+   }</div>
 								<div class="review-thread">
 									<div class="review-comment">
-										<img class="avatar" src="jim.jpeg" alt="Jim">
+										<img class="avatar" src="../jim.jpeg" alt="Jim">
 										<div>
 											<div class="who">Jim</div>
-											Why are we swallowing this error instead of letting it propagate?
+											Por que estamos suprimindo este erro ao invés de permitir sua propagação?
 										</div>
 									</div>
 									<div class="review-comment">
-										<img class="avatar" src="kevin.jpg" alt="Kevin">
+										<img class="avatar" src="../kevin.jpg" alt="Kevin">
 										<div>
 											<div class="who">Kevin</div>
-											lol, idk, Claude wrote it.
+											kkk, sei lá, o Claude que escreveu.
 										</div>
 									</div>
 								</div>
@@ -551,7 +550,7 @@
 							</div>
 						</div>
 						<div class="mock do">
-							<span class="mock-label">✓ Do</span>
+							<span class="mock-label">✓ Faça</span>
 							<div class="review">
 								<div class="diff-line">  function chargeCustomer(order) {</div>
 								<div class="diff-line add">+   try {</div>
@@ -561,19 +560,19 @@
 								<div class="diff-line add">+   }</div>
 								<div class="review-thread">
 									<div class="review-comment">
-										<img class="avatar" src="jim.jpeg" alt="Jim">
+										<img class="avatar" src="../jim.jpeg" alt="Jim">
 										<div>
 											<div class="who">Jim</div>
-											Why are we swallowing this error instead of letting it propagate?
+											Por que estamos suprimindo este erro ao invés de permitir sua propagação?
 										</div>
 									</div>
 									<div class="review-comment">
-										<img class="avatar" src="kevin.jpg" alt="Kevin">
+										<img class="avatar" src="../kevin.jpg" alt="Kevin">
 										<div>
 											<div class="who">Kevin</div>
-											Upstream retries on any thrown error, and this one's expected during backfills, so we log
-											and drop it here to avoid a retry storm. I'll add a comment. Should I create a backlog
-											ticket for rewriting upstream when we got the time?
+											O upstream retenta em qualquer erro lançado, e esse aqui é esperado durante backfills, então logamos
+											e descartamos para evitar uma tempestade de retries. Vou adicionar um comentário. Quer que eu abra um ticket
+											no backlog pra reescrever o upstream quando a gente tiver tempo?
 										</div>
 									</div>
 								</div>
@@ -582,47 +581,47 @@
 						</div>
 					</div>
 					<p>
-						Even if AI did most of the work, you're still responsible for it, and it has your name on it.
-						If your name is on it, it's your work. It is your responsibility to understand, verify
-						and own the work that has been done.
+						Mesmo se a IA fez a maior parte do trabalho, você ainda é responsável por ele, e ele tem o seu nome.
+						Se o seu nome está nele, é o seu trabalho. É sua responsabilidade entender, verificar
+						e assumir o que foi feito.
 					</p>	
-					<p>By blindly submitting AI work you're:</p>
+					<p>Ao entregar trabalho de IA no piloto automático, você está:</p>
 					<ul class="note-list">
-						<li>putting the burden on other people to understand and verify your work.</li>
-						<li>showing disrespect by forcing others to do what you can't be bothered to do yourself.</li>
-						<li>showing others that your work needs to be double-checked.</li>
-						<li>looking unprofessional.</li>
-						<li>showcasing how replaceable you are.</li>
+						<li>jogando nas outras pessoas o ônus de entender e verificar o seu trabalho.</li>
+						<li>sendo desrespeitoso ao forçar os outros a fazer o que você não se deu ao trabalho de fazer.</li>
+						<li>mostrando que o seu trabalho precisa ser checado de novo.</li>
+						<li>parecendo pouco profissional.</li>
+						<li>exibindo o quanto você é substituível.</li>
 					</ul>
 					<div class="list-pair">
 						<div>
-							<p>More things to avoid:</p>
+							<p>Mais coisas a evitar:</p>
 							<ul class="note-list marked dont-list">
-								<li>Don't reply to feedback to your work with AI responses.</li>
-								<li>Don't blame the AI when getting feedback.</li>
-								<li>Don't excuse the lack of knowledge because "AI did it".</li>
-								<li>Don't let standards slip just because AI is involved.</li>
+								<li>Não responda ao feedback do seu trabalho com respostas de IA.</li>
+								<li>Não culpe a IA quando receber feedback.</li>
+								<li>Não justifique a falta de conhecimento com “a IA que fez”.</li>
+								<li>Não deixe o padrão cair só porque tem IA no meio.</li>
 							</ul>
 						</div>
 						<div>
-							<p>Here is what you should try instead:</p>
+							<p>Em vez disso, tente isto:</p>
 							<ul class="note-list marked do-list">
-								<li>Read, understand and verify the work.</li>
-								<li>Reply to feedback as the owner of the work.</li>
-								<li>Take responsibility for the work as if it was your own (it has your name on it, so it is yours).</li>
-								<li>Show others that you care about what you're doing.</li>
+								<li>Leia, entenda e verifique o trabalho.</li>
+								<li>Responda ao feedback como dono do trabalho.</li>
+								<li>Assuma a responsabilidade como se fosse seu (tem o seu nome, então é seu).</li>
+								<li>Mostre que você se importa com o que está fazendo.</li>
 							</ul>
 						</div>
 					</div>
 
-					<p>Take ownership over work that has your name on it. Be someone people can rely on. Don't be a meat proxy.</p>
+					<p>Assuma o trabalho que tem o seu nome. Seja alguém em quem as pessoas possam confiar. Não seja um intermediário de carne e osso.</p>
 				</div>
 			</section>
 
 			<section>
-				<h3 class="sub-heading">Why this matters:</h3>
+				<h3 class="sub-heading">Por que isso importa:</h3>
 				<ul>
-					<li><a href="https://gruhn.me/blog/2026-08-03/">Don't Be a Meat Proxy</a> (Original inspiration for this site)</li>
+					<li><a href="https://gruhn.me/blog/2026-08-03/">Don't Be a Meat Proxy</a> (Inspiração original deste site)</li>
 					<li><a href="https://leonfurze.com/2026/03/28/the-effort-economy-of-slop/">The Effort Economy of Slop</a></li>
 					<li><a href="https://tombedor.dev/human-attention-and-human-effort/">If You are Asking for Human Attention, Demonstrate Human Effort</a></li>
 					<li><a href="https://not-an-llm.com/meat-based-llm-proxies">Meat-based llm proxies</a></li>
@@ -630,38 +629,37 @@
 			</section>
 
 			<section class="share">
-				<p>Dealing with a meat proxy? Share this page:</p>
-				<button type="button" class="share-button" id="share-button" data-url="https://nomeatproxy.com/">
+				<p>Lidando com um intermediário de carne e osso? Compartilhe esta página:</p>
+				<button type="button" class="share-button" id="share-button" data-url="https://nomeatproxy.com/pt-br/">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 						<path d="M10 13a5 5 0 0 0 7.07 0l1.93-1.93a5 5 0 0 0-7.07-7.07L10.5 5.5"></path>
 						<path d="M14 11a5 5 0 0 0-7.07 0L5 12.93a5 5 0 0 0 7.07 7.07L13.5 18.5"></path>
 					</svg>
-					<span class="share-button-label">Copy link</span>
+					<span class="share-button-label">Copiar link</span>
 				</button>
 
-				<p class="share-secondary">Or react with one of these:</p>
+				<p class="share-secondary">Ou reaja com um destes:</p>
 				<div class="emoji-grid">
-					<a class="emoji-item" href="emoji/meat_proxy_front.png" download="meat_proxy.png" title="Download meat_proxy.png">
-						<img src="emoji/meat_proxy_front.png" alt="Meat proxy emoji, front view" width="32" height="32">
+					<a class="emoji-item" href="../emoji/meat_proxy_front.png" download="meat_proxy.png" title="Baixar meat_proxy.png">
+						<img src="../emoji/meat_proxy_front.png" alt="Emoji de intermediário de carne e osso, vista frontal" width="32" height="32">
 						<span class="emoji-name">:meat_proxy:</span>
 					</a>
-					<a class="emoji-item" href="emoji/meat_proxy_slab.png" download="meat_proxy.png" title="Download meat_proxy.png">
-						<img src="emoji/meat_proxy_slab.png" alt="Meat proxy emoji, angled view" width="32" height="32">
+					<a class="emoji-item" href="../emoji/meat_proxy_slab.png" download="meat_proxy.png" title="Baixar meat_proxy.png">
+						<img src="../emoji/meat_proxy_slab.png" alt="Emoji de intermediário de carne e osso, vista em ângulo" width="32" height="32">
 						<span class="emoji-name">:meat_proxy:</span>
 					</a>
 				</div>
 			</section>
 
 			<footer>
-				<p>Inspired by:</p>
+				<p>Inspirado por:</p>
 				<ul>
-					<li><a href="https://dontasktoask.com/">Don't ask to ask, just ask</a></li>
-					<li><a href="https://nohello.net/en/">No Hello</a></li>
+					<li><a href="https://dontasktoask.com/pt-br/">Não peça para perguntar, apenas pergunte</a></li>
+					<li><a href="https://nohello.net/pt-br/">No Hello</a></li>
 				</ul>
-				<p>Also available in: <a href="tr/" hreflang="tr" lang="tr">Türkçe</a></p>
-				<p>Source on <a href="https://github.com/atomfinger/nomeatproxy">GitHub</a>.</p>
-				<p>Created by <a href="https://lindbakk.com">John Mikael Lindbakk</a>.</p>
-				<p><small><small>(Before any "gotchas": Parts of this website is AI-generated. I'm bad at CSS, frontend and in general.)</small></small></p>
+				<p>Código no <a href="https://github.com/atomfinger/nomeatproxy">GitHub</a>.</p>
+				<p>Criado por <a href="https://lindbakk.com">John Mikael Lindbakk</a>.</p>
+				<p><small><small>(Antes que venham falar: partes deste site foram geradas por IA. Sou péssimo em CSS, frontend e na vida em geral.)</small></small></p>
 			</footer>
 		</main>
 		<script>
@@ -686,7 +684,7 @@
 						var url = shareButton.getAttribute('data-url');
 						function showCopied() {
 							clearTimeout(resetTimer);
-							shareLabel.textContent = 'Copied!';
+							shareLabel.textContent = 'Copiado!';
 							shareButton.classList.add('copied');
 							resetTimer = setTimeout(function () {
 								shareLabel.textContent = defaultLabel;
