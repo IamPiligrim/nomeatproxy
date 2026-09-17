@@ -4,6 +4,15 @@ A one-page site about not being a "meat proxy": someone who just copies AI outpu
 
 Live at [nomeatproxy.com](https://nomeatproxy.com).
 
+## Running locally
+
+```bash
+npm install
+npm run serve
+```
+
+Then open `http://localhost:8080`. Use `npm run build` for a one-off static build into `_site/`.
+
 ## Inspired by
 
 - [Don't Be a Meat Proxy](https://gruhn.me/blog/2026-08-03/) — the post that inspired this page.
