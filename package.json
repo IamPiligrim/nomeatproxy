@@ -3,9 +3,11 @@
 	"private": true,
 	"scripts": {
 		"build": "eleventy",
-		"serve": "eleventy --serve"
+		"serve": "eleventy --serve",
+		"test": "node --test"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^3.0.0"
+		"@11ty/eleventy": "^3.0.0",
+		"ajv": "^8.20.0"
 	}
 }

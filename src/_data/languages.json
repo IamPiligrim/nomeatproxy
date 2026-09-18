@@ -3,5 +3,5 @@
 	{ "code": "tr", "href": "tr/", "hreflang": "tr", "lang": "tr", "name": "Türkçe" },
 	{ "code": "pt-br", "href": "pt-br/", "hreflang": "pt-BR", "lang": "pt-BR", "name": "Português (Brasil)" },
 	{ "code": "es-ar", "href": "es-ar/", "hreflang": "es-AR", "lang": "es-AR", "name": "Español (Argentina)" },
-	{ "code": "ja", "href": "", "hreflang": "ja", "lang": "ja", "name": "日本語" }
+	{ "code": "ja", "href": "ja/", "hreflang": "ja", "lang": "ja", "name": "日本語" }
 ]

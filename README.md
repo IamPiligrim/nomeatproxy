@@ -22,10 +22,11 @@ Also available in:
 | [Türkçe](https://nomeatproxy.com/tr/) | [@deligoez](https://github.com/deligoez) |
 | [Português (Brasil)](https://nomeatproxy.com/pt-br/) | [@mohvn](https://github.com/mohvn) |
 | [Español (Argentina)](https://nomeatproxy.com/es-ar/) | [@matiaspalomeque](https://github.com/matiaspalomeque) |
+| [日本語](https://nomeatproxy.com/ja/) | [@Shieru292](https://github.com/Shieru292) |
 
 Thanks so much to the people who contribute translations!
 
-Want to add a translation? Excellent! Just follow the same approach used for English in [`src/_data/en.json`](src/_data/en.json) and make a PR.
+Want to add a translation? Excellent! Just follow the same approach used for English in [`src/_data/translations/en.json`](src/_data/translations/en.json) and add your language to [`src/_data/languages.json`](src/_data/languages.json), then make a PR.
 
 Same if you're spotting a translation error.
 
