@@ -250,8 +250,8 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 			<footer>
 				<p>{{ t.footer.inspiredByHeading }}</p>
 				<ul>
-					<li><a href="https://dontasktoask.com/{{ t.footer.dontAskToAsk.hrefPostfix }}">{{ t.footer.dontAskToAsk.text }}</a></li>
-					<li><a href="https://nohello.net/{{ t.footer.noHello.hrefPostfix }}">{{ t.footer.noHello.text }}</a></li>
+					<li><a href="https://dontasktoask.com/{{ t.footer.dontAskToAsk.hrefPostfix | default("") }}">{{ t.footer.dontAskToAsk.text | default("Don't ask to ask, just ask") }}</a></li>
+					<li><a href="https://nohello.net/{{ t.footer.noHello.hrefPostfix | default("en/") }}">{{ t.footer.noHello.text | default("No Hello") }}</a></li>
 				</ul>
 				<p>{{ t.footer.alsoAvailable }}{% for l in languages | exceptCode(code) %} <a href="/{{ l.href }}" hreflang="{{ l.hreflang }}" lang="{{ l.lang }}">{{ l.name }}</a>{{ ' ·' if not loop.last }}{% endfor %}</p>
 				<p>{{ t.footer.sourcePrefix }}<a href="https://github.com/atomfinger/nomeatproxy">GitHub</a>{{ t.footer.sourceSuffix }}</p>

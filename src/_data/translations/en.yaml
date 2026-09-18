@@ -95,12 +95,6 @@ share:
   secondary: 'Or react with one of these:'
 footer:
   inspiredByHeading: 'Inspired by:'
-  dontAskToAsk:
-    text: Don't ask to ask, just ask
-    hrefPostfix: ''
-  noHello:
-    text: No Hello
-    hrefPostfix: en/
   alsoAvailable: 'Also available in:'
   sourcePrefix: 'Source on '
   sourceSuffix: .

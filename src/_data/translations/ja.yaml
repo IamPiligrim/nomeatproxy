@@ -77,12 +77,6 @@ share:
   secondary: 'または、これでリアクションしましょう:'
 footer:
   inspiredByHeading: '参考にしたサイト:'
-  dontAskToAsk:
-    text: Don't ask to ask, just ask
-    hrefPostfix: ''
-  noHello:
-    text: No Hello
-    hrefPostfix: en/
   alsoAvailable: '他の言語でも利用できます:'
   sourcePrefix: ソースは
   sourceSuffix: にあります。
