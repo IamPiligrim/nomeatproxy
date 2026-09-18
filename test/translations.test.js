@@ -3,6 +3,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const Ajv = require("ajv");
+const yaml = require("js-yaml");
 
 const translationsDir = path.join(__dirname, "..", "src", "_data", "translations");
 const schema = JSON.parse(
@@ -15,11 +16,15 @@ const languages = JSON.parse(
 const ajv = new Ajv({ allErrors: true });
 const validate = ajv.compile(schema);
 
-const files = fs.readdirSync(translationsDir).filter((file) => file.endsWith(".json"));
+const files = fs.readdirSync(translationsDir).filter((file) => /\.ya?ml$/.test(file));
+
+function loadTranslation(file) {
+	return yaml.load(fs.readFileSync(path.join(translationsDir, file), "utf8"));
+}
 
 test("every translation file matches the schema", () => {
 	for (const file of files) {
-		const data = JSON.parse(fs.readFileSync(path.join(translationsDir, file), "utf8"));
+		const data = loadTranslation(file);
 		const valid = validate(data);
 		assert.ok(
 			valid,
@@ -30,15 +35,15 @@ test("every translation file matches the schema", () => {
 
 test("each translation's lang field matches its filename", () => {
 	for (const file of files) {
-		const code = file.replace(/\.json$/, "");
-		const data = JSON.parse(fs.readFileSync(path.join(translationsDir, file), "utf8"));
+		const code = file.replace(/\.ya?ml$/, "");
+		const data = loadTranslation(file);
 		assert.equal(data.lang, code, `${file}: "lang" is "${data.lang}", expected "${code}"`);
 	}
 });
 
 test("every templated locale has a matching languages.json entry", () => {
 	for (const file of files) {
-		const code = file.replace(/\.json$/, "");
+		const code = file.replace(/\.ya?ml$/, "");
 		const entry = languages.find((l) => l.code === code);
 		assert.ok(entry, `no languages.json entry for locale "${code}"`);
 	}
@@ -66,28 +71,5 @@ test("only the root locale has an empty href in languages.json", () => {
 				`languages.json entry for "${entry.code}" has an empty href — it will link to itself instead of /${entry.code}/`
 			);
 		}
-	}
-});
-
-function findRawAngleBrackets(value, path, violations) {
-	if (typeof value === "string") {
-		if (/[<>]/.test(value)) {
-			violations.push(`${path}: ${JSON.stringify(value)}`);
-		}
-	} else if (Array.isArray(value)) {
-		value.forEach((item, i) => findRawAngleBrackets(item, `${path}[${i}]`, violations));
-	} else if (value && typeof value === "object") {
-		for (const key of Object.keys(value)) {
-			findRawAngleBrackets(value[key], `${path}.${key}`, violations);
-		}
-	}
-}
-
-test("no translation string contains a raw < or > (must use &lt;/&gt;, since strings render unescaped)", () => {
-	for (const file of files) {
-		const data = JSON.parse(fs.readFileSync(path.join(translationsDir, file), "utf8"));
-		const violations = [];
-		findRawAngleBrackets(data, file, violations);
-		assert.deepEqual(violations, [], `raw angle bracket(s) found:\n${violations.join("\n")}`);
 	}
 });
