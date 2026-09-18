@@ -1,125 +1,134 @@
+---
+pagination:
+  data: locales
+  size: 1
+  alias: code
+permalink: "{{ (languages | findByCode(code)).href }}index.html"
+---
+{%- set t = translations[code] %}
+{%- set lang = languages | findByCode(code) %}
+{%- set pageUrl = "https://nomeatproxy.com/" + lang.href %}
 <!DOCTYPE html>
-<html lang="{{ en.lang }}">
+<html lang="{{ t.lang }}">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{{ en.title | safe }}</title>
-		<meta name="description" content="{{ en.description | safe }}">
-		<link rel="canonical" href="https://nomeatproxy.com/">
-		<link rel="alternate" hreflang="en" href="https://nomeatproxy.com/">
-		<link rel="alternate" hreflang="tr" href="https://nomeatproxy.com/tr/">
+		<title>{{ t.title | safe }}</title>
+		<meta name="description" content="{{ t.description | safe }}">
+		<link rel="canonical" href="{{ pageUrl }}">
+		{%- for l in languages %}
+		<link rel="alternate" hreflang="{{ l.hreflang }}" href="https://nomeatproxy.com/{{ l.href }}">
+		{%- endfor %}
 		<link rel="alternate" hreflang="x-default" href="https://nomeatproxy.com/">
-		<link rel="alternate" hreflang="pt-BR" href="https://nomeatproxy.com/pt-br/">
-		<link rel="alternate" hreflang="es-AR" href="https://nomeatproxy.com/es-ar/">
 		<meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
 		<meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)">
 
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://nomeatproxy.com/">
-		<meta property="og:site_name" content="{{ en.ogSiteName | safe }}">
-		<meta property="og:title" content="{{ en.title | safe }}">
-		<meta property="og:description" content="{{ en.description | safe }}">
+		<meta property="og:url" content="{{ pageUrl }}">
+		<meta property="og:site_name" content="{{ t.ogSiteName | safe }}">
+		<meta property="og:title" content="{{ t.title | safe }}">
+		<meta property="og:description" content="{{ t.description | safe }}">
 		<meta property="og:image" content="https://nomeatproxy.com/social-card.png">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
-		<meta property="og:image:alt" content="{{ en.ogImageAlt | safe }}">
+		<meta property="og:image:alt" content="{{ t.ogImageAlt | safe }}">
 
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="{{ en.title | safe }}">
-		<meta name="twitter:description" content="{{ en.description | safe }}">
+		<meta name="twitter:title" content="{{ t.title | safe }}">
+		<meta name="twitter:description" content="{{ t.description | safe }}">
 		<meta name="twitter:image" content="https://nomeatproxy.com/social-card.png">
 
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="/styles.css">
 	</head>
 	<body>
 		<main>
 			<div class="brand">
-				<img src="no_meat_proxy_logo.png" alt="{{ en.brand.logoAlt | safe }}">
-				<h1>{{ en.title | safe }}</h1>
+				<img src="/no_meat_proxy_logo.png" alt="{{ t.brand.logoAlt | safe }}">
+				<h1>{{ t.title | safe }}</h1>
 			</div>
-			<p class="hook">{{ en.hook | safe }}</p>
+			<p class="hook">{{ t.hook | safe }}</p>
 
 			<section class="examples">
 				<div class="example">
-					<h3>{{ en.example1.heading | safe }}</h3>
+					<h3>{{ t.example1.heading | safe }}</h3>
 					<div class="mock-pair">
 						<div class="mock dont sync-height">
-							<span class="mock-label">{{ en.example1.dontLabel | safe }}</span>
+							<span class="mock-label">{{ t.example1.dontLabel | safe }}</span>
 							<div class="msg">
-								<img class="avatar" src="jim.jpeg" alt="Jim">
+								<img class="avatar" src="/jim.jpeg" alt="Jim">
 								<div>
 									<div class="who">Jim</div>
-									<div class="bubble">{{ en.example1.question | safe }}</div>
+									<div class="bubble">{{ t.example1.question | safe }}</div>
 								</div>
 							</div>
 							<div class="msg">
-								<img class="avatar" src="kevin.jpg" alt="Kevin">
+								<img class="avatar" src="/kevin.jpg" alt="Kevin">
 								<div>
 									<div class="who">Kevin</div>
 									<div class="bubble">
-										{{ en.example1.dontAnswer | safe }}
+										{{ t.example1.dontAnswer | safe }}
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="mock do sync-source">
-							<span class="mock-label">{{ en.example1.doLabel | safe }}</span>
+							<span class="mock-label">{{ t.example1.doLabel | safe }}</span>
 							<div class="msg">
-								<img class="avatar" src="jim.jpeg" alt="Jim">
+								<img class="avatar" src="/jim.jpeg" alt="Jim">
 								<div>
 									<div class="who">Jim</div>
-									<div class="bubble">{{ en.example1.question | safe }}</div>
+									<div class="bubble">{{ t.example1.question | safe }}</div>
 								</div>
 							</div>
 							<div class="msg">
-								<img class="avatar" src="kevin.jpg" alt="Kevin">
+								<img class="avatar" src="/kevin.jpg" alt="Kevin">
 								<div>
 									<div class="who">Kevin</div>
 									<div class="bubble">
-										{{ en.example1.doAnswer | safe }}
+										{{ t.example1.doAnswer | safe }}
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<p>{{ en.example1.paragraph1 | safe }}</p>
-					<p>{{ en.example1.paragraph2 | safe }}</p>
-					<p>{{ en.example1.consequencesIntro | safe }}</p>
+					<p>{{ t.example1.paragraph1 | safe }}</p>
+					<p>{{ t.example1.paragraph2 | safe }}</p>
+					<p>{{ t.example1.consequencesIntro | safe }}</p>
 					<ul class="note-list">
-						{%- for item in en.example1.consequences %}
+						{%- for item in t.example1.consequences %}
 						<li>{{ item | safe }}</li>
 						{%- endfor %}
 					</ul>
 					<div class="list-pair">
 						<div>
-							<p>{{ en.example1.avoidHeading | safe }}</p>
+							<p>{{ t.example1.avoidHeading | safe }}</p>
 							<ul class="note-list marked dont-list">
-								{%- for item in en.example1.avoidList %}
+								{%- for item in t.example1.avoidList %}
 								<li>{{ item | safe }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 						<div>
-							<p>{{ en.example1.insteadHeading | safe }}</p>
+							<p>{{ t.example1.insteadHeading | safe }}</p>
 							<ul class="note-list marked do-list">
-								{%- for item in en.example1.insteadList %}
+								{%- for item in t.example1.insteadList %}
 								<li>{{ item | safe }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 					</div>
 
-					<p>{{ en.example1.closing | safe }}</p>
+					<p>{{ t.example1.closing | safe }}</p>
 				</div>
 
 				<div class="example">
-					<h3>{{ en.example2.heading | safe }}</h3>
+					<h3>{{ t.example2.heading | safe }}</h3>
 					<div class="mock-pair">
 						<div class="mock dont">
-							<span class="mock-label">{{ en.example2.dontLabel | safe }}</span>
+							<span class="mock-label">{{ t.example2.dontLabel | safe }}</span>
 							<div class="review">
 								<div class="diff-line">  function chargeCustomer(order) {</div>
 								<div class="diff-line add">+   try {</div>
@@ -129,17 +138,17 @@
 								<div class="diff-line add">+   }</div>
 								<div class="review-thread">
 									<div class="review-comment">
-										<img class="avatar" src="jim.jpeg" alt="Jim">
+										<img class="avatar" src="/jim.jpeg" alt="Jim">
 										<div>
 											<div class="who">Jim</div>
-											{{ en.example2.reviewComment1 | safe }}
+											{{ t.example2.reviewComment1 | safe }}
 										</div>
 									</div>
 									<div class="review-comment">
-										<img class="avatar" src="kevin.jpg" alt="Kevin">
+										<img class="avatar" src="/kevin.jpg" alt="Kevin">
 										<div>
 											<div class="who">Kevin</div>
-											{{ en.example2.dontReviewComment2 | safe }}
+											{{ t.example2.dontReviewComment2 | safe }}
 										</div>
 									</div>
 								</div>
@@ -147,7 +156,7 @@
 							</div>
 						</div>
 						<div class="mock do">
-							<span class="mock-label">{{ en.example2.doLabel | safe }}</span>
+							<span class="mock-label">{{ t.example2.doLabel | safe }}</span>
 							<div class="review">
 								<div class="diff-line">  function chargeCustomer(order) {</div>
 								<div class="diff-line add">+   try {</div>
@@ -157,17 +166,17 @@
 								<div class="diff-line add">+   }</div>
 								<div class="review-thread">
 									<div class="review-comment">
-										<img class="avatar" src="jim.jpeg" alt="Jim">
+										<img class="avatar" src="/jim.jpeg" alt="Jim">
 										<div>
 											<div class="who">Jim</div>
-											{{ en.example2.reviewComment1 | safe }}
+											{{ t.example2.reviewComment1 | safe }}
 										</div>
 									</div>
 									<div class="review-comment">
-										<img class="avatar" src="kevin.jpg" alt="Kevin">
+										<img class="avatar" src="/kevin.jpg" alt="Kevin">
 										<div>
 											<div class="who">Kevin</div>
-											{{ en.example2.doReviewComment2 | safe }}
+											{{ t.example2.doReviewComment2 | safe }}
 										</div>
 									</div>
 								</div>
@@ -175,40 +184,40 @@
 							</div>
 						</div>
 					</div>
-					<p>{{ en.example2.paragraph1 | safe }}</p>
-					<p>{{ en.example2.consequencesIntro | safe }}</p>
+					<p>{{ t.example2.paragraph1 | safe }}</p>
+					<p>{{ t.example2.consequencesIntro | safe }}</p>
 					<ul class="note-list">
-						{%- for item in en.example2.consequences %}
+						{%- for item in t.example2.consequences %}
 						<li>{{ item | safe }}</li>
 						{%- endfor %}
 					</ul>
 					<div class="list-pair">
 						<div>
-							<p>{{ en.example2.avoidHeading | safe }}</p>
+							<p>{{ t.example2.avoidHeading | safe }}</p>
 							<ul class="note-list marked dont-list">
-								{%- for item in en.example2.avoidList %}
+								{%- for item in t.example2.avoidList %}
 								<li>{{ item | safe }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 						<div>
-							<p>{{ en.example2.insteadHeading | safe }}</p>
+							<p>{{ t.example2.insteadHeading | safe }}</p>
 							<ul class="note-list marked do-list">
-								{%- for item in en.example2.insteadList %}
+								{%- for item in t.example2.insteadList %}
 								<li>{{ item | safe }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 					</div>
 
-					<p>{{ en.example2.closing | safe }}</p>
+					<p>{{ t.example2.closing | safe }}</p>
 				</div>
 			</section>
 
 			<section>
-				<h3 class="sub-heading">{{ en.whyMatters.heading | safe }}</h3>
+				<h3 class="sub-heading">{{ t.whyMatters.heading | safe }}</h3>
 				<ul>
-					<li><a href="https://gruhn.me/blog/2026-08-03/">Don't Be a Meat Proxy</a>{{ en.whyMatters.originalInspirationNote | safe }}</li>
+					<li><a href="https://gruhn.me/blog/2026-08-03/">Don't Be a Meat Proxy</a>{{ t.whyMatters.originalInspirationNote | safe }}</li>
 					<li><a href="https://leonfurze.com/2026/03/28/the-effort-economy-of-slop/">The Effort Economy of Slop</a></li>
 					<li><a href="https://tombedor.dev/human-attention-and-human-effort/">If You are Asking for Human Attention, Demonstrate Human Effort</a></li>
 					<li><a href="https://not-an-llm.com/meat-based-llm-proxies">Meat-based llm proxies</a></li>
@@ -216,41 +225,41 @@
 			</section>
 
 			<section class="share">
-				<p>{{ en.share.prompt | safe }}</p>
-				<button type="button" class="share-button" id="share-button" data-url="https://nomeatproxy.com/">
+				<p>{{ t.share.prompt | safe }}</p>
+				<button type="button" class="share-button" id="share-button" data-url="{{ pageUrl }}">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 						<path d="M10 13a5 5 0 0 0 7.07 0l1.93-1.93a5 5 0 0 0-7.07-7.07L10.5 5.5"></path>
 						<path d="M14 11a5 5 0 0 0-7.07 0L5 12.93a5 5 0 0 0 7.07 7.07L13.5 18.5"></path>
 					</svg>
-					<span class="share-button-label">{{ en.share.copyLabel | safe }}</span>
+					<span class="share-button-label">{{ t.share.copyLabel | safe }}</span>
 				</button>
 
-				<p class="share-secondary">{{ en.share.secondary | safe }}</p>
+				<p class="share-secondary">{{ t.share.secondary | safe }}</p>
 				<div class="emoji-grid">
-					<a class="emoji-item" href="emoji/meat_proxy_front.png" download="meat_proxy.png" title="Download meat_proxy.png">
-						<img src="emoji/meat_proxy_front.png" alt="Meat proxy emoji, front view" width="32" height="32">
+					<a class="emoji-item" href="/emoji/meat_proxy_front.png" download="meat_proxy.png" title="Download meat_proxy.png">
+						<img src="/emoji/meat_proxy_front.png" alt="Meat proxy emoji, front view" width="32" height="32">
 						<span class="emoji-name">:meat_proxy:</span>
 					</a>
-					<a class="emoji-item" href="emoji/meat_proxy_slab.png" download="meat_proxy.png" title="Download meat_proxy.png">
-						<img src="emoji/meat_proxy_slab.png" alt="Meat proxy emoji, angled view" width="32" height="32">
+					<a class="emoji-item" href="/emoji/meat_proxy_slab.png" download="meat_proxy.png" title="Download meat_proxy.png">
+						<img src="/emoji/meat_proxy_slab.png" alt="Meat proxy emoji, angled view" width="32" height="32">
 						<span class="emoji-name">:meat_proxy:</span>
 					</a>
 				</div>
 			</section>
 
 			<footer>
-				<p>{{ en.footer.inspiredByHeading | safe }}</p>
+				<p>{{ t.footer.inspiredByHeading | safe }}</p>
 				<ul>
 					<li><a href="https://dontasktoask.com/">Don't ask to ask, just ask</a></li>
 					<li><a href="https://nohello.net/en/">No Hello</a></li>
 				</ul>
-				<p>{{ en.footer.alsoAvailable | safe }}{% for lang in languages %}{% if lang.code != en.lang %} <a href="{{ lang.href | safe }}" hreflang="{{ lang.hreflang | safe }}" lang="{{ lang.lang | safe }}">{{ lang.name | safe }}</a>{{ ' ·' if not loop.last }}{% endif %}{% endfor %}</p>
-				<p>{{ en.footer.sourcePrefix | safe }}<a href="https://github.com/atomfinger/nomeatproxy">GitHub</a>{{ en.footer.sourceSuffix | safe }}</p>
-				<p>{{ en.footer.createdByPrefix | safe }}<a href="https://lindbakk.com">John Mikael Lindbakk</a>{{ en.footer.createdBySuffix | safe }}</p>
-				<p><small><small>{{ en.footer.disclaimer | safe }}</small></small></p>
+				<p>{{ t.footer.alsoAvailable | safe }}{% for l in languages | exceptCode(code) %} <a href="/{{ l.href | safe }}" hreflang="{{ l.hreflang | safe }}" lang="{{ l.lang | safe }}">{{ l.name | safe }}</a>{{ ' ·' if not loop.last }}{% endfor %}</p>
+				<p>{{ t.footer.sourcePrefix | safe }}<a href="https://github.com/atomfinger/nomeatproxy">GitHub</a>{{ t.footer.sourceSuffix | safe }}</p>
+				<p>{{ t.footer.createdByPrefix | safe }}<a href="https://lindbakk.com">John Mikael Lindbakk</a>{{ t.footer.createdBySuffix | safe }}</p>
+				<p><small><small>{{ t.footer.disclaimer | safe }}</small></small></p>
 			</footer>
 		</main>
-		<script src="script.js"></script>
+		<script src="/script.js"></script>
 		<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 	</body>
 </html>
