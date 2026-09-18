@@ -1,0 +1,107 @@
+lang: tr
+title: Yapay zekânın postacısı olma
+description: Yapay zekâ bir araç. Araca aracı olma.
+ogSiteName: Postacı olma
+ogImageAlt: 'No Meat Proxy logosu ve yanında İngilizce slogan: AI is a tool. You shouldn''t be.'
+brand:
+  logoAlt: No Meat Proxy logosu
+hook: Yapay zekâ bir araç. Araca aracı olma.
+example1:
+  heading: Yapay zekânın cevabını kopyalayıp insanlara gönderme
+  dontLabel: ✕ Yapma
+  doLabel: ✓ Yap
+  question: Selam, feature toggle'lar nasıl çalışıyor? Kullanıcı bazında ayarlayabiliyor muyuz?
+  dontAnswer: >-
+    Buradaki feature flag sistemi, config tabanlı özel bir implementasyon. Tanım: FeatureToggles
+    sınıfı — boolean alanlar içeren (ör. enableNewCheckoutFlow, useOptimizedSearchIndex) bir
+    @ConfigurationProperties data class'ı; FeatureConfig sınıfında @EnableConfigurationProperties
+    ile kaydediliyor. Kullanım kalıbı: FeatureToggles'ı inject edip property'ye göre dallanmak, ör.
+    !featureToggles.enableNewCheckoutFlow ise bir ForbiddenException fırlatmak. Bazı flag'ler erken
+    return/exception tetikliyor, bazıları ise implementasyonlar arasında tamamen geçiş yapıyor.
+    Konfigürasyon app.feature-toggles.* altında düz YAML; profil bazında override edilebiliyor ve
+    standart @ConfigurationProperties olduğu için env var'larla da override edilebiliyor. Bu da
+    bugünkü implementasyonla bir feature'ı kullanıcı bazında açıp kapatmanın mümkün olmadığı
+    anlamına geliyor.
+  doAnswer: Maalesef hayır. Koda gömülü, düz bir aç/kapa anahtarı.
+  paragraph1: >-
+    Yapay zekânın söylediğini papağan gibi tekrarlayınca soruyu soranın işini epey zorlaştırırsın.
+    Yapay zekânın cevapları genelde gereğinden uzun ve karmaşık olur, çoğu zaman da kimsenin
+    sormadığı ayrıntılara girer. Senin görüşüne güvenildiği için sana soruldu. Yapay zekâ çıktısını
+    öylece iletirsen yalnızca aracılık etmiş olursun. Yapay zekânın postacısından ibaret kalırsın.
+  paragraph2: Tek yaptığın insanlarla yapay zekâ arasında mesaj taşımaksa, gerçekten senin işe katkın nedir?
+  consequencesIntro: 'Yapay zekânın cevabını yapıştırarak:'
+  consequences:
+    - herkesin işini zorlaştırıyorsun
+    - yerinin ne kadar kolay doldurulabileceğini gösteriyorsun
+    - aslında kimseye yardımcı olmuyorsun
+    - profesyonellikten uzak görünüyorsun
+    - insanların sana güvenini sarsıyorsun
+  avoidHeading: 'Kaçınman gereken başka şeyler:'
+  avoidList:
+    - Tartışmaya yapay zekâdan aldığın metin yığınlarını yapıştırıp "katkıda bulunma"
+    - >-
+      "Selam, şöyle bir sorunum var: <yapay zekânın ürettiği koskoca bir metin bloğu>" gibi
+      sorular sorma
+  insteadHeading: 'Bunun yerine şunları dene:'
+  insteadList:
+    - Yapay zekânın çıktısını oku ve doğrula
+    - Cevaplarını ve sorularını kendi cümlelerinle yaz
+    - Katacak anlamlı bir şeyin olduğunda tartışmalara katkıda bulun
+  closing: İnsanlara bir insan olarak cevap ver. İnsanlara insan gibi davran. Yapay zekânın postacısı olma!
+example2:
+  heading: Yapay zekâya yaptırıp anlamadığın ya da doğrulamadığın işi gönderme
+  dontLabel: ✕ Yapma
+  doLabel: ✓ Yap
+  reviewComment1: Bu hatayı propagate etmek yerine neden burada yutuyoruz?
+  dontReviewComment2: ahah bilmem, Claude yazdı.
+  doReviewComment2: >-
+    Upstream fırlatılan her hatada retry ediyor, bu hata da backfill sırasında zaten bekleniyor;
+    retry storm olmasın diye burada loglayıp düşürüyoruz. Yorum ekleyeceğim. Vaktimiz olunca
+    upstream'i yeniden yazmak için backlog'a ticket açayım mı?
+  paragraph1: >-
+    İşin çoğunu yapay zekâ yapmış olsa bile sorumlusu yine sensin, üstünde de senin adın var.
+    Üstünde adın varsa o iş senindir. Yapılan işi anlamak, doğrulamak ve sahiplenmek sana düşer.
+  consequencesIntro: 'Yapay zekânın yaptığı işi körü körüne göndererek:'
+  consequences:
+    - işini anlama ve doğrulama yükünü başkalarının sırtına yıkıyorsun
+    - kendin yapmaya üşendiğin şeyi başkalarına yaptırarak saygısızlık ediyorsun
+    - işinin bir kez daha kontrol edilmesi gerektiğini herkese gösteriyorsun
+    - profesyonellikten uzak görünüyorsun
+    - yerinin ne kadar kolay doldurulabileceğini sergiliyorsun
+  avoidHeading: 'Kaçınman gereken başka şeyler:'
+  avoidList:
+    - İşinle ilgili geri bildirimlere yapay zekâ cevabıyla karşılık verme
+    - Geri bildirim aldığında suçu yapay zekâya atma
+    - Bilgi eksikliğini "yapay zekâ yaptı" diyerek mazur gösterme
+    - İşin içinde yapay zekâ var diye çıtayı düşürme
+  insteadHeading: 'Bunun yerine şunları dene:'
+  insteadList:
+    - İşi oku, anla ve doğrula
+    - Geri bildirimlere işin sahibi olarak cevap ver
+    - İşin sorumluluğunu kendi işinmiş gibi üstlen (üstünde senin adın var, yani o iş senin)
+    - Yaptığın işi önemsediğini başkalarına göster
+  closing: Üstünde adın olan işi sahiplen. İnsanların güvenebileceği biri ol. Yapay zekânın postacısı olma.
+whyMatters:
+  heading: Konuyla ilgili yazılar (İngilizce)
+  originalInspirationNote: ' (bu sitenin asıl ilham kaynağı)'
+share:
+  prompt: 'Yapay zekânın postacısıyla mı uğraşıyorsun? Bu sayfayı paylaş:'
+  copyLabel: Bağlantıyı kopyala
+  copiedLabel: Kopyalandı
+  secondary: 'Ya da şunlardan biriyle tepki ver:'
+footer:
+  inspiredByHeading: 'İlham kaynakları:'
+  dontAskToAsk:
+    text: Sormak için sorma, sadece sor
+    hrefPostfix: tr/
+  noHello:
+    text: No Hello
+    hrefPostfix: tr/
+  alsoAvailable: 'Diğer diller:'
+  sourcePrefix: 'Kaynak kodu '
+  sourceSuffix: '''da.'
+  createdByPrefix: 'Hazırlayan: '
+  createdBySuffix: .
+  disclaimer: >-
+    ("Yakaladım!" demeden önce: Bu sitenin bazı kısımlarını yapay zekâ üretti. CSS'te, frontend'de
+    ve genel olarak hayatta berbatım.)

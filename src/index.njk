@@ -13,8 +13,8 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{{ t.title | safe }}</title>
-		<meta name="description" content="{{ t.description | safe }}">
+		<title>{{ t.title }}</title>
+		<meta name="description" content="{{ t.description }}">
 		<link rel="canonical" href="{{ pageUrl }}">
 		{%- for l in languages %}
 		<link rel="alternate" hreflang="{{ l.hreflang }}" href="https://nomeatproxy.com/{{ l.href }}">
@@ -25,17 +25,17 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{{ pageUrl }}">
-		<meta property="og:site_name" content="{{ t.ogSiteName | safe }}">
-		<meta property="og:title" content="{{ t.title | safe }}">
-		<meta property="og:description" content="{{ t.description | safe }}">
+		<meta property="og:site_name" content="{{ t.ogSiteName }}">
+		<meta property="og:title" content="{{ t.title }}">
+		<meta property="og:description" content="{{ t.description }}">
 		<meta property="og:image" content="https://nomeatproxy.com/social-card.png">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
-		<meta property="og:image:alt" content="{{ t.ogImageAlt | safe }}">
+		<meta property="og:image:alt" content="{{ t.ogImageAlt }}">
 
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="{{ t.title | safe }}">
-		<meta name="twitter:description" content="{{ t.description | safe }}">
+		<meta name="twitter:title" content="{{ t.title }}">
+		<meta name="twitter:description" content="{{ t.description }}">
 		<meta name="twitter:image" content="https://nomeatproxy.com/social-card.png">
 
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -46,22 +46,22 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 	<body>
 		<main>
 			<div class="brand">
-				<img src="/no_meat_proxy_logo.png" alt="{{ t.brand.logoAlt | safe }}">
-				<h1>{{ t.title | safe }}</h1>
+				<img src="/no_meat_proxy_logo.png" alt="{{ t.brand.logoAlt }}">
+				<h1>{{ t.ogSiteName }}</h1>
 			</div>
-			<p class="hook">{{ t.hook | safe }}</p>
+			<p class="hook">{{ t.hook }}</p>
 
 			<section class="examples">
 				<div class="example">
-					<h3>{{ t.example1.heading | safe }}</h3>
+					<h3>{{ t.example1.heading }}</h3>
 					<div class="mock-pair">
 						<div class="mock dont sync-height">
-							<span class="mock-label">{{ t.example1.dontLabel | safe }}</span>
+							<span class="mock-label">{{ t.example1.dontLabel }}</span>
 							<div class="msg">
 								<img class="avatar" src="/jim.jpeg" alt="Jim">
 								<div>
 									<div class="who">Jim</div>
-									<div class="bubble">{{ t.example1.question | safe }}</div>
+									<div class="bubble">{{ t.example1.question }}</div>
 								</div>
 							</div>
 							<div class="msg">
@@ -69,18 +69,18 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 								<div>
 									<div class="who">Kevin</div>
 									<div class="bubble">
-										{{ t.example1.dontAnswer | safe }}
+										{{ t.example1.dontAnswer }}
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="mock do sync-source">
-							<span class="mock-label">{{ t.example1.doLabel | safe }}</span>
+							<span class="mock-label">{{ t.example1.doLabel }}</span>
 							<div class="msg">
 								<img class="avatar" src="/jim.jpeg" alt="Jim">
 								<div>
 									<div class="who">Jim</div>
-									<div class="bubble">{{ t.example1.question | safe }}</div>
+									<div class="bubble">{{ t.example1.question }}</div>
 								</div>
 							</div>
 							<div class="msg">
@@ -88,47 +88,47 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 								<div>
 									<div class="who">Kevin</div>
 									<div class="bubble">
-										{{ t.example1.doAnswer | safe }}
+										{{ t.example1.doAnswer }}
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<p>{{ t.example1.paragraph1 | safe }}</p>
-					<p>{{ t.example1.paragraph2 | safe }}</p>
-					<p>{{ t.example1.consequencesIntro | safe }}</p>
+					<p>{{ t.example1.paragraph1 }}</p>
+					<p>{{ t.example1.paragraph2 }}</p>
+					<p>{{ t.example1.consequencesIntro }}</p>
 					<ul class="note-list">
 						{%- for item in t.example1.consequences %}
-						<li>{{ item | safe }}</li>
+						<li>{{ item }}</li>
 						{%- endfor %}
 					</ul>
 					<div class="list-pair">
 						<div>
-							<p>{{ t.example1.avoidHeading | safe }}</p>
+							<p>{{ t.example1.avoidHeading }}</p>
 							<ul class="note-list marked dont-list">
 								{%- for item in t.example1.avoidList %}
-								<li>{{ item | safe }}</li>
+								<li>{{ item }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 						<div>
-							<p>{{ t.example1.insteadHeading | safe }}</p>
+							<p>{{ t.example1.insteadHeading }}</p>
 							<ul class="note-list marked do-list">
 								{%- for item in t.example1.insteadList %}
-								<li>{{ item | safe }}</li>
+								<li>{{ item }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 					</div>
 
-					<p>{{ t.example1.closing | safe }}</p>
+					<p>{{ t.example1.closing }}</p>
 				</div>
 
 				<div class="example">
-					<h3>{{ t.example2.heading | safe }}</h3>
+					<h3>{{ t.example2.heading }}</h3>
 					<div class="mock-pair">
 						<div class="mock dont">
-							<span class="mock-label">{{ t.example2.dontLabel | safe }}</span>
+							<span class="mock-label">{{ t.example2.dontLabel }}</span>
 							<div class="review">
 								<div class="diff-line">  function chargeCustomer(order) {</div>
 								<div class="diff-line add">+   try {</div>
@@ -141,14 +141,14 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 										<img class="avatar" src="/jim.jpeg" alt="Jim">
 										<div>
 											<div class="who">Jim</div>
-											{{ t.example2.reviewComment1 | safe }}
+											{{ t.example2.reviewComment1 }}
 										</div>
 									</div>
 									<div class="review-comment">
 										<img class="avatar" src="/kevin.jpg" alt="Kevin">
 										<div>
 											<div class="who">Kevin</div>
-											{{ t.example2.dontReviewComment2 | safe }}
+											{{ t.example2.dontReviewComment2 }}
 										</div>
 									</div>
 								</div>
@@ -156,7 +156,7 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 							</div>
 						</div>
 						<div class="mock do">
-							<span class="mock-label">{{ t.example2.doLabel | safe }}</span>
+							<span class="mock-label">{{ t.example2.doLabel }}</span>
 							<div class="review">
 								<div class="diff-line">  function chargeCustomer(order) {</div>
 								<div class="diff-line add">+   try {</div>
@@ -169,14 +169,14 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 										<img class="avatar" src="/jim.jpeg" alt="Jim">
 										<div>
 											<div class="who">Jim</div>
-											{{ t.example2.reviewComment1 | safe }}
+											{{ t.example2.reviewComment1 }}
 										</div>
 									</div>
 									<div class="review-comment">
 										<img class="avatar" src="/kevin.jpg" alt="Kevin">
 										<div>
 											<div class="who">Kevin</div>
-											{{ t.example2.doReviewComment2 | safe }}
+											{{ t.example2.doReviewComment2 }}
 										</div>
 									</div>
 								</div>
@@ -184,40 +184,40 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 							</div>
 						</div>
 					</div>
-					<p>{{ t.example2.paragraph1 | safe }}</p>
-					<p>{{ t.example2.consequencesIntro | safe }}</p>
+					<p>{{ t.example2.paragraph1 }}</p>
+					<p>{{ t.example2.consequencesIntro }}</p>
 					<ul class="note-list">
 						{%- for item in t.example2.consequences %}
-						<li>{{ item | safe }}</li>
+						<li>{{ item }}</li>
 						{%- endfor %}
 					</ul>
 					<div class="list-pair">
 						<div>
-							<p>{{ t.example2.avoidHeading | safe }}</p>
+							<p>{{ t.example2.avoidHeading }}</p>
 							<ul class="note-list marked dont-list">
 								{%- for item in t.example2.avoidList %}
-								<li>{{ item | safe }}</li>
+								<li>{{ item }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 						<div>
-							<p>{{ t.example2.insteadHeading | safe }}</p>
+							<p>{{ t.example2.insteadHeading }}</p>
 							<ul class="note-list marked do-list">
 								{%- for item in t.example2.insteadList %}
-								<li>{{ item | safe }}</li>
+								<li>{{ item }}</li>
 								{%- endfor %}
 							</ul>
 						</div>
 					</div>
 
-					<p>{{ t.example2.closing | safe }}</p>
+					<p>{{ t.example2.closing }}</p>
 				</div>
 			</section>
 
 			<section>
-				<h3 class="sub-heading">{{ t.whyMatters.heading | safe }}</h3>
+				<h3 class="sub-heading">{{ t.whyMatters.heading }}</h3>
 				<ul>
-					<li><a href="https://gruhn.me/blog/2026-08-03/">Don't Be a Meat Proxy</a>{{ t.whyMatters.originalInspirationNote | safe }}</li>
+					<li><a href="https://gruhn.me/blog/2026-08-03/">Don't Be a Meat Proxy</a>{{ t.whyMatters.originalInspirationNote }}</li>
 					<li><a href="https://leonfurze.com/2026/03/28/the-effort-economy-of-slop/">The Effort Economy of Slop</a></li>
 					<li><a href="https://tombedor.dev/human-attention-and-human-effort/">If You are Asking for Human Attention, Demonstrate Human Effort</a></li>
 					<li><a href="https://not-an-llm.com/meat-based-llm-proxies">Meat-based llm proxies</a></li>
@@ -225,16 +225,16 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 			</section>
 
 			<section class="share">
-				<p>{{ t.share.prompt | safe }}</p>
+				<p>{{ t.share.prompt }}</p>
 				<button type="button" class="share-button" id="share-button" data-url="{{ pageUrl }}">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 						<path d="M10 13a5 5 0 0 0 7.07 0l1.93-1.93a5 5 0 0 0-7.07-7.07L10.5 5.5"></path>
 						<path d="M14 11a5 5 0 0 0-7.07 0L5 12.93a5 5 0 0 0 7.07 7.07L13.5 18.5"></path>
 					</svg>
-					<span class="share-button-label">{{ t.share.copyLabel | safe }}</span>
+					<span class="share-button-label">{{ t.share.copyLabel }}</span>
 				</button>
 
-				<p class="share-secondary">{{ t.share.secondary | safe }}</p>
+				<p class="share-secondary">{{ t.share.secondary }}</p>
 				<div class="emoji-grid">
 					<a class="emoji-item" href="/emoji/meat_proxy_front.png" download="meat_proxy.png" title="Download meat_proxy.png">
 						<img src="/emoji/meat_proxy_front.png" alt="Meat proxy emoji, front view" width="32" height="32">
@@ -248,15 +248,15 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 			</section>
 
 			<footer>
-				<p>{{ t.footer.inspiredByHeading | safe }}</p>
+				<p>{{ t.footer.inspiredByHeading }}</p>
 				<ul>
-					<li><a href="https://dontasktoask.com/">Don't ask to ask, just ask</a></li>
-					<li><a href="https://nohello.net/en/">No Hello</a></li>
+					<li><a href="https://dontasktoask.com/{{ t.footer.dontAskToAsk.hrefPostfix | default("") }}">{{ t.footer.dontAskToAsk.text | default("Don't ask to ask, just ask") }}</a></li>
+					<li><a href="https://nohello.net/{{ t.footer.noHello.hrefPostfix | default("en/") }}">{{ t.footer.noHello.text | default("No Hello") }}</a></li>
 				</ul>
-				<p>{{ t.footer.alsoAvailable | safe }}{% for l in languages | exceptCode(code) %} <a href="/{{ l.href | safe }}" hreflang="{{ l.hreflang | safe }}" lang="{{ l.lang | safe }}">{{ l.name | safe }}</a>{{ ' ·' if not loop.last }}{% endfor %}</p>
-				<p>{{ t.footer.sourcePrefix | safe }}<a href="https://github.com/atomfinger/nomeatproxy">GitHub</a>{{ t.footer.sourceSuffix | safe }}</p>
-				<p>{{ t.footer.createdByPrefix | safe }}<a href="https://lindbakk.com">John Mikael Lindbakk</a>{{ t.footer.createdBySuffix | safe }}</p>
-				<p><small><small>{{ t.footer.disclaimer | safe }}</small></small></p>
+				<p>{{ t.footer.alsoAvailable }}{% for l in languages | exceptCode(code) %} <a href="/{{ l.href }}" hreflang="{{ l.hreflang }}" lang="{{ l.lang }}">{{ l.name }}</a>{{ ' ·' if not loop.last }}{% endfor %}</p>
+				<p>{{ t.footer.sourcePrefix }}<a href="https://github.com/atomfinger/nomeatproxy">GitHub</a>{{ t.footer.sourceSuffix }}</p>
+				<p>{{ t.footer.createdByPrefix }}<a href="https://lindbakk.com">John Mikael Lindbakk</a>{{ t.footer.createdBySuffix }}</p>
+				<p><small><small>{{ t.footer.disclaimer }}</small></small></p>
 			</footer>
 		</main>
 		<script src="/script.js"></script>

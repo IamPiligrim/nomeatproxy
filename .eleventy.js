@@ -1,9 +1,12 @@
+const yaml = require("js-yaml");
+
 module.exports = function (eleventyConfig) {
+	eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
+
 	eleventyConfig.addFilter("findByCode", (list, code) => list.find((item) => item.code === code));
 	eleventyConfig.addFilter("exceptCode", (list, code) => list.filter((item) => item.code !== code));
 
 	// Hand-maintained static translations (will be migrated...)
-	eleventyConfig.addPassthroughCopy("tr");
 	eleventyConfig.addPassthroughCopy("pt-br");
 	eleventyConfig.addPassthroughCopy("es-ar");
 

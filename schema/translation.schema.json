@@ -143,6 +143,22 @@
 			],
 			"properties": {
 				"inspiredByHeading": { "type": "string", "minLength": 1 },
+				"dontAskToAsk": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"text": { "type": "string", "minLength": 1 },
+						"hrefPostfix": { "type": "string", "minLength": 1 }
+					}
+				},
+				"noHello": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"text": { "type": "string", "minLength": 1 },
+						"hrefPostfix": { "type": "string", "minLength": 1 }
+					}
+				},
 				"alsoAvailable": { "type": "string", "minLength": 1 },
 				"sourcePrefix": { "type": "string", "minLength": 1 },
 				"sourceSuffix": { "type": "string", "minLength": 1 },

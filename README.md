@@ -17,16 +17,14 @@ Then open `http://localhost:8080`. Use `npm run build` for a one-off static buil
 
 Also available in:
 
-| Language | Contributor |
+| Language | Language contributors 🎉 |
 | --- | --- |
 | [Türkçe](https://nomeatproxy.com/tr/) | [@deligoez](https://github.com/deligoez) |
 | [Português (Brasil)](https://nomeatproxy.com/pt-br/) | [@mohvn](https://github.com/mohvn) |
 | [Español (Argentina)](https://nomeatproxy.com/es-ar/) | [@matiaspalomeque](https://github.com/matiaspalomeque) |
 | [日本語](https://nomeatproxy.com/ja/) | [@Shieru292](https://github.com/Shieru292) |
 
-Thanks so much to the people who contribute translations!
-
-Want to add a translation? Excellent! Just follow the same approach used for English in [`src/_data/translations/en.json`](src/_data/translations/en.json) and add your language to [`src/_data/languages.json`](src/_data/languages.json), then make a PR.
+Want to add a translation? Excellent! Copy [`src/_data/translations/en.yaml`](src/_data/translations/en.yaml) to `<your-language-code>.yaml`, translate its values, and add an entry to [`src/_data/languages.json`](src/_data/languages.json). Run `npm test` to check your file against the schema, then make a PR.
 
 Same if you're spotting a translation error.
 
