@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("tr");
 	eleventyConfig.addPassthroughCopy("pt-br");
 	eleventyConfig.addPassthroughCopy("es-ar");
+	eleventyConfig.addPassthroughCopy("ja");
 
 	// Shared static assets referenced by every locale.
 	eleventyConfig.addPassthroughCopy("CNAME");
