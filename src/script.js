@@ -19,7 +19,7 @@ if (shareButton) {
 		var url = shareButton.getAttribute('data-url');
 		function showCopied() {
 			clearTimeout(resetTimer);
-			shareLabel.textContent = 'Copied!';
+			shareLabel.textContent = shareButton.getAttribute('data-copied-label');
 			shareButton.classList.add('copied');
 			resetTimer = setTimeout(function () {
 				shareLabel.textContent = defaultLabel;

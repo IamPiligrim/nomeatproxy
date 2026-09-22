@@ -32,6 +32,11 @@ body {
 	line-height: 1.6;
 }
 
+html:lang(ko) body {
+	word-break: keep-all;
+	overflow-wrap: break-word;
+}
+
 main {
 	max-width: 720px;
 	margin: 0 auto;
@@ -130,6 +135,10 @@ footer a:hover {
 	padding: 0.9rem;
 }
 
+html:lang(ko) .mock {
+	min-width: 0;
+}
+
 .mock.sync-height,
 .mock.sync-source {
 	align-self: start;
@@ -191,6 +200,10 @@ footer a:hover {
 	border: 1px solid var(--border);
 	border-radius: 8px;
 	overflow: hidden;
+}
+
+html:lang(ko) .review {
+	overflow-x: auto;
 }
 
 .diff-line {
