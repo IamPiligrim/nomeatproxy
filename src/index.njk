@@ -226,7 +226,7 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 
 			<section class="share">
 				<p>{{ t.share.prompt }}</p>
-				<button type="button" class="share-button" id="share-button" data-url="{{ pageUrl }}">
+				<button type="button" class="share-button" id="share-button" data-url="{{ pageUrl }}" data-copied-label="{{ t.share.copiedLabel }}">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 						<path d="M10 13a5 5 0 0 0 7.07 0l1.93-1.93a5 5 0 0 0-7.07-7.07L10.5 5.5"></path>
 						<path d="M14 11a5 5 0 0 0-7.07 0L5 12.93a5 5 0 0 0 7.07 7.07L13.5 18.5"></path>
@@ -236,12 +236,12 @@ permalink: "{{ (languages | findByCode(code)).href }}index.html"
 
 				<p class="share-secondary">{{ t.share.secondary }}</p>
 				<div class="emoji-grid">
-					<a class="emoji-item" href="/emoji/meat_proxy_front.png" download="meat_proxy.png" title="Download meat_proxy.png">
-						<img src="/emoji/meat_proxy_front.png" alt="Meat proxy emoji, front view" width="32" height="32">
+					<a class="emoji-item" href="/emoji/meat_proxy_front.png" download="meat_proxy.png" title="{{ t.share.emojiDownloadTitle | default(translations.en.share.emojiDownloadTitle) }}">
+						<img src="/emoji/meat_proxy_front.png" alt="{{ t.share.emojiFrontAlt | default(translations.en.share.emojiFrontAlt) }}" width="32" height="32">
 						<span class="emoji-name">:meat_proxy:</span>
 					</a>
-					<a class="emoji-item" href="/emoji/meat_proxy_slab.png" download="meat_proxy.png" title="Download meat_proxy.png">
-						<img src="/emoji/meat_proxy_slab.png" alt="Meat proxy emoji, angled view" width="32" height="32">
+					<a class="emoji-item" href="/emoji/meat_proxy_slab.png" download="meat_proxy.png" title="{{ t.share.emojiDownloadTitle | default(translations.en.share.emojiDownloadTitle) }}">
+						<img src="/emoji/meat_proxy_slab.png" alt="{{ t.share.emojiAngledAlt | default(translations.en.share.emojiAngledAlt) }}" width="32" height="32">
 						<span class="emoji-name">:meat_proxy:</span>
 					</a>
 				</div>

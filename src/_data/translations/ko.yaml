@@ -1,0 +1,105 @@
+lang: ko
+title: No Meat Proxy
+description: AI는 도구예요. 당신까지 도구가 될 필요는 없어요.
+ogSiteName: No Meat Proxy
+ogImageAlt: No Meat Proxy 로고와 'AI는 도구예요. 당신까지 도구가 될 필요는 없어요.'라는 뜻의 영어 문구
+brand:
+  logoAlt: No Meat Proxy 로고
+hook: AI는 도구예요. 당신까지 도구가 될 필요는 없어요.
+example1:
+  heading: AI 답변을 그대로 복사해 보내지 마세요
+  dontLabel: ✕ 나쁜 예
+  doLabel: ✓ 좋은 예
+  question: 이 기능 토글은 어떻게 동작하나요? 사용자별로 설정할 수 있나요?
+  dontAnswer: >-
+    이 시스템의 기능 플래그는 설정 파일을 기반으로 자체 구현되어 있습니다. 정의: FeatureToggles 클래스는
+    enableNewCheckoutFlow, useOptimizedSearchIndex 등의 불리언 필드를 가진 @ConfigurationProperties
+    데이터 클래스이며, FeatureConfig 클래스에서 @EnableConfigurationProperties를 통해 등록됩니다.
+    사용 패턴: FeatureToggles를 주입한 뒤 속성값에 따라 분기합니다. 예를 들어
+    if (!featureToggles.enableNewCheckoutFlow) throw a ForbiddenException과 같은 방식입니다.
+    일부 플래그는 조기 반환이나 예외 발생 여부를 제어하고, 다른 플래그는 구현 자체를 전환합니다.
+    설정은 일반 YAML 파일의 app.feature-toggles.* 하위에 정의되며, 프로파일별로 덮어쓸 수 있습니다.
+    또한 표준 @ConfigurationProperties를 사용하므로 환경 변수로도 재정의할 수 있습니다.
+    따라서 현재 구현에서는 사용자별로 기능을 켜거나 끌 수 없습니다.
+  doAnswer: 아쉽지만 안 돼요. 켜고 끄는 기능만 하드코딩돼 있어요.
+  paragraph1: >-
+    AI가 준 답을 그대로 옮기면, 질문한 사람이 오히려 더 애를 써야 합니다.
+    AI 답변은 장황하고 복잡한 데다 묻지도 않은 내용까지 담는 경우가 많습니다.
+    상대는 여러분의 판단을 믿고 질문한 겁니다. 그런데 AI 답변을 그대로 전달하면
+    중간에서 말을 옮기는 역할만 하게 됩니다. 자기 판단 없이 AI 답변만 전달하는
+    '고기 대리인(meat proxy)'이 되는 거죠.
+  paragraph2: 사람과 AI 사이에서 말만 옮긴다면, 여러분은 어떤 도움을 주고 있나요?
+  consequencesIntro: 'AI 답변을 그대로 보내면:'
+  consequences:
+    - 다른 사람들이 더 애를 써야 합니다.
+    - 굳이 여러분이 없어도 된다는 인상을 줍니다.
+    - 정작 도움이 되지 않습니다.
+    - 전문가답지 못해 보입니다.
+    - 사람들이 여러분을 덜 신뢰하게 됩니다.
+  avoidHeading: '이런 행동도 피하세요:'
+  avoidList:
+    - AI가 쓴 긴 글을 붙여 넣고 토론에 '기여했다'고 생각하지 마세요.
+    - '"이런 문제가 있는데요: <AI가 생성한 엄청나게 긴 글>"처럼 질문하지 마세요.'
+  insteadHeading: '이렇게 해보세요:'
+  insteadList:
+    - AI 답변을 직접 읽고 검증하세요.
+    - 답변과 질문은 자기 말로 정리하세요.
+    - 보탤 만한 이야기가 있을 때 토론에 참여하세요.
+  closing: 사람답게 답하고, 상대도 사람이라는 걸 기억하세요. 고기 대리인이 되지 마세요!
+example2:
+  heading: 이해하지 못했거나 검증하지 않은 AI 작업물을 제출하지 마세요
+  dontLabel: ✕ 나쁜 예
+  doLabel: ✓ 좋은 예
+  reviewComment1: 호출한 쪽에 오류를 전달하지 않고 로그만 남기는 이유가 뭔가요?
+  dontReviewComment2: ㅋㅋ 저도 몰라요. Claude가 짰어요.
+  doReviewComment2: >-
+    호출하는 쪽에서 오류를 받으면 무조건 재시도해요. 이건 과거 데이터를 채워 넣을 때 예상되는 오류라,
+    재시도가 폭주하지 않도록 여기서는 로그만 남기고 넘어갑니다. 주석을 추가할게요.
+    나중에 호출하는 쪽을 고칠 수 있게 백로그에 이슈도 등록해 둘까요?
+  paragraph1: >-
+    AI가 대부분의 일을 했더라도, 자기 이름으로 내놓은 결과물의 책임은 본인에게 있습니다.
+    이름을 걸고 제출했다면 자기 작업입니다. 무엇을 했는지 이해하고, 검증하고,
+    끝까지 책임지는 것도 본인의 몫입니다.
+  consequencesIntro: 'AI 작업물을 확인도 없이 제출하면:'
+  consequences:
+    - 작업을 이해하고 검증할 부담을 다른 사람에게 떠넘깁니다.
+    - 자기가 하기 귀찮은 일을 남에게 시키는 건 상대를 존중하지 않는 태도입니다.
+    - 여러분이 한 일은 꼭 다시 확인해야 한다는 인상을 줍니다.
+    - 전문가답지 못해 보입니다.
+    - 굳이 여러분이 없어도 된다는 인상을 줍니다.
+  avoidHeading: '이런 행동도 피하세요:'
+  avoidList:
+    - 자기 작업에 대한 피드백에 AI 답변을 그대로 보내지 마세요.
+    - 피드백을 받았을 때 AI 탓을 하지 마세요.
+    - '"AI가 한 거라서요"라는 말로 모르는 것을 변명하지 마세요.'
+    - AI를 썼다는 이유로 작업의 기준을 낮추지 마세요.
+  insteadHeading: '이렇게 해보세요:'
+  insteadList:
+    - 작업물을 직접 읽고, 이해하고, 검증하세요.
+    - 작업을 맡은 사람으로서 피드백에 답하세요.
+    - 자기 일로 여기고 책임지세요. 자기 이름으로 내놓았으니 자기 일입니다.
+    - 맡은 일에 신경 쓰고 있다는 걸 보여주세요.
+  closing: >-
+    자기 이름을 건 작업에는 책임을 지세요. 사람들이 믿고 맡길 수 있는 사람이 되세요.
+    고기 대리인이 되지 마세요.
+whyMatters:
+  heading: '이게 왜 중요한가요?'
+  originalInspirationNote: ' (이 사이트를 만들게 된 계기)'
+share:
+  prompt: 'AI 답변만 전달하는 사람이 있나요? 이 페이지를 공유해 보세요:'
+  copyLabel: 링크 복사
+  copiedLabel: 복사했어요!
+  secondary: '이 이모지로 반응을 남겨도 좋아요:'
+  emojiDownloadTitle: meat_proxy.png 다운로드
+  emojiFrontAlt: 고기 대리인 이모지, 정면
+  emojiAngledAlt: 고기 대리인 이모지, 비스듬히 본 모습
+footer:
+  inspiredByHeading: '영감을 준 사이트:'
+  alsoAvailable: '다른 언어로 읽기:'
+  sourcePrefix: '소스 코드는 '
+  sourceSuffix: 에서 볼 수 있습니다.
+  createdByPrefix: '이 사이트는 '
+  createdBySuffix: 가 만들었습니다.
+  disclaimer: >-
+    (혹시 지적하실까 봐 덧붙이면, 이 사이트도 일부는 AI로 만들었습니다.
+    제가 CSS나 프런트엔드를 잘 못해서요. 사실 다른 것도 별로 잘하진 못합니다.)

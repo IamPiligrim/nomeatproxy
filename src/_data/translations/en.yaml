@@ -93,6 +93,9 @@ share:
   copyLabel: Copy link
   copiedLabel: Copied!
   secondary: 'Or react with one of these:'
+  emojiDownloadTitle: Download meat_proxy.png
+  emojiFrontAlt: Meat proxy emoji, front view
+  emojiAngledAlt: Meat proxy emoji, angled view
 footer:
   inspiredByHeading: 'Inspired by:'
   alsoAvailable: 'Also available in:'

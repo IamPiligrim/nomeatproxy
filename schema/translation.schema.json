@@ -131,7 +131,10 @@
 				"prompt": { "type": "string", "minLength": 1 },
 				"copyLabel": { "type": "string", "minLength": 1 },
 				"copiedLabel": { "type": "string", "minLength": 1 },
-				"secondary": { "type": "string", "minLength": 1 }
+				"secondary": { "type": "string", "minLength": 1 },
+				"emojiDownloadTitle": { "type": "string", "minLength": 1 },
+				"emojiFrontAlt": { "type": "string", "minLength": 1 },
+				"emojiAngledAlt": { "type": "string", "minLength": 1 }
 			}
 		},
 		"footer": {
