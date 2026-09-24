@@ -4,5 +4,6 @@
 	{ "code": "pt-br", "href": "pt-br/", "hreflang": "pt-BR", "lang": "pt-BR", "name": "Português (Brasil)" },
 	{ "code": "es-ar", "href": "es-ar/", "hreflang": "es-AR", "lang": "es-AR", "name": "Español (Argentina)" },
 	{ "code": "ja", "href": "ja/", "hreflang": "ja", "lang": "ja", "name": "日本語" },
-	{ "code": "ko", "href": "ko/", "hreflang": "ko", "lang": "ko", "name": "한국어" }
+	{ "code": "ko", "href": "ko/", "hreflang": "ko", "lang": "ko", "name": "한국어" },
+	{ "code": "ru", "href": "ru/", "hreflang": "ru", "lang": "ru", "name": "Русский" }
 ]
