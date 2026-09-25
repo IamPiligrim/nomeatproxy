@@ -25,6 +25,7 @@ Also available in:
 | [日本語](https://nomeatproxy.com/ja/) | [@Shieru292](https://github.com/Shieru292) |
 | [한국어](https://nomeatproxy.com/ko/) | [@greenheadHQ](https://github.com/greenheadHQ) |
 | [Русский](https://nomeatproxy.com/ru/) | [@kuraysdev](https://github.com/kuraysdev) |
+| [Беларуская](https://nomeatproxy.com/be/) | [@IamPiligrim](https://github.com/IamPiligrim) |
 
 Want to add a translation? Excellent! Copy [`src/_data/translations/en.yaml`](src/_data/translations/en.yaml) to `<your-language-code>.yaml`, translate its values, and add an entry to [`src/_data/languages.json`](src/_data/languages.json). Run `npm test` to check your file against the schema, then make a PR.
 
